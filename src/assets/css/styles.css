@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Yanone+Kaffeesatz:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --font1: 'Finger Paint', cursive;
+    --font2: 'Titillium Web', sans-serif;
+    --font3: 'Yanone Kaffeesatz', sans-serif;
+}
+
+body{
+    background-color: #f2F2F2;
+    opacity: 0.8;
+    background-image: radial-gradient(#C9C9C9 0.5px, #f2F2F2 0.5px);
+    background-size: 10px 10px;
+    font-family: var(--font3);
+    font-size: 20px;
+    position: fixed;
+}
+
+section nav a{
+    display: flex;   
+}
