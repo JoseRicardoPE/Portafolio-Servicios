@@ -1,11 +1,39 @@
-<h1>Proyecto con Angular</h1>
-<section>
-  <nav>
-    <a [routerLink]="['/sobre-mi']">Sobre mí</a>
-    <a [routerLink]="['/proyectos']">Proyectos</a>
-    <a [routerLink]="['/crear-proyecto']">Crear Proyecto</a>
-    <a [routerLink]="['/contacto']">Contácto</a>
-  </nav>
-</section>
+<main class="main__container" id="main__container">
+  <!-- Header -->
+  <header class="header container" id="header">
+    <nav class="header__nav" id="header__nav">
+      <a [routerLink]="['/sobre-mi']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Sobre mí</a>
+      <a [routerLink]="['/proyectos']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Proyectos</a>
+      <a [routerLink]="['/crear-proyecto']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Crear Proyecto</a>
+      <a [routerLink]="['/contacto']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Contácto</a>
+    </nav>
+  </header>
 
-<router-outlet></router-outlet>
+  <!-- Main Section -->
+  <section class="main__section container" id="main__section">
+    <router-outlet></router-outlet>
+  </section>
+
+  <!-- Footer -->
+</main>
+<footer class="footer container" id="footer">
+  <section class="footer__section" id="footer__section">
+    <span class="footer__name" id="footer__name">Jose Ricardo Pacheco Escobar</span>
+    <span class="footer__job" id="footer__job">Ingeniero de Software</span>
+  </section>
+  <nav class="footer__nav" id="footer__nav">
+    <a href="https://www.linkedin.com/in/jose-ricardo-pacheco-escobar-a2a76422b/" class="footer__link" id="footer__link" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/JoseRicardoPE/" class="footer__link" id="footer__link" target="_blank">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="['/proyectos']" class="footer__link" id="footer__link">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+    <a href="" class="footer__link" id="footer__link" target="_blank">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </nav>
+</footer>
+
