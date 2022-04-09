@@ -10,6 +10,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { EditprojectComponent } from './components/editproject/editproject.component';
 import { ListprojectComponent } from './components/listproject/listproject.component';
 import { ErrorComponent } from './components/error/error.component';
+import { ProjectService } from './services/project/project.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,11 @@ import { ErrorComponent } from './components/error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
