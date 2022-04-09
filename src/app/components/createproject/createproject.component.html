@@ -1,1 +1,32 @@
-<p>createproject works!</p>
+<section class="section__formulario">
+    <h2 class="form__title">{{title}}</h2>
+    <form class="form" #projectForm = "ngForm" (ngSubmit)="onSubmit(projectForm)" action="">
+        <div class="inputs" id="inputs">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" #name="ngModel" [(ngModel)]="project.name">
+        </div>
+        <div class="inputs" id="inputs">
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" #description="ngModel" [(ngModel)]="project.description"></textarea>
+        </div>
+        <div class="inputs" id="inputs">
+            <label for="category">Categoría</label>
+            <input type="text" name="category" id="category" #category="ngModel" [(ngModel)]="project.category">
+        </div>
+        <div class="inputs" id="inputs">
+            <label for="year">Año de lanzamiento</label>
+            <input type="number" name="year" id="year" #year="ngModel" [(ngModel)]="project.year">
+        </div>
+        <div class="inputs" id="inputs">
+            <label for="langs">Lenguajes</label>
+            <input type="text" name="langs" id="langs" #langs="ngModel" [(ngModel)]="project.langs">
+        </div>
+        <div class="inputs" id="inputs">
+            <label for="image">Imágen del proyecto</label>
+            <input type="file" name="image" id="image" placeholder="Cargar imágen">
+        </div>
+        <input class="form__btn" type="submit" value="Enviar">
+    </form>
+</section>
+
+

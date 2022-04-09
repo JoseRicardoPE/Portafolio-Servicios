@@ -1,11 +1,13 @@
 export class Project{
     constructor(
-        _id: string,
-        name: string,
-        description: string, 
-        category: string, 
-        year: number,
-        langs: string,
-        image: string,
+        public _id: string,
+        public name: string,
+        public description: string, 
+        public category: string, 
+        public year: number,
+        public langs: string,
+        public image: string,
     ){}
 }
+
+
