@@ -20,6 +20,19 @@ export class ProjectService {
   testService(){
     return 'Probando el servicio de Angular';
   }
+
+  saveProject(project: Project): Observable<any>{
+    // para enviar los parámetros, todos los datos del objeto, pero lo enviamos como JSON para que el API pueda cogerlo 
+    let parametros = JSON.stringify(project);
+
+    // para establecer las cabeceras, es decir, como se va enviar la información
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+    // hacemos la petición por POST
+    // save-project es la ruta establecida en el backend para guardar los proyectos
+    // parametros -> los datos a guardar en el backend y los headers
+    return this.http.post(this.url + 'save-project', parametros, {headers: headers});
+  }
 }
 
 

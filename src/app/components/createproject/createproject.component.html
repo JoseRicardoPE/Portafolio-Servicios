@@ -1,17 +1,26 @@
 <section class="section__formulario">
     <h2 class="form__title">{{title}}</h2>
+    <div class="message success" id="message" *ngIf="status == 'success'">
+        ¡El proyecto se ha creado, puedes verlo <a href="#">aquí.</a>
+    </div>
+    <div class="message failed" id="message" *ngIf="status == 'failed'">
+        ¡No ha sido posible crear el proyecto!
+    </div>
     <form class="form" #projectForm = "ngForm" (ngSubmit)="onSubmit(projectForm)" action="">
         <div class="inputs" id="inputs">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" #name="ngModel" [(ngModel)]="project.name">
+            <input type="text" name="name" id="name" #name="ngModel" [(ngModel)]="project.name" required>
+            <span class="input__alert" *ngIf="name.touched && !name.valid">¡Campo nombre es requerido para poder continuar!</span>
         </div>
         <div class="inputs" id="inputs">
             <label for="description">Descripción</label>
-            <textarea name="description" id="description" #description="ngModel" [(ngModel)]="project.description"></textarea>
+            <textarea name="description" id="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <span class="input__alert" *ngIf="description.touched && !description.valid">¡Campo descripción es requerido para poder continuar!</span>
         </div>
         <div class="inputs" id="inputs">
             <label for="category">Categoría</label>
-            <input type="text" name="category" id="category" #category="ngModel" [(ngModel)]="project.category">
+            <input type="text" name="category" id="category" #category="ngModel" [(ngModel)]="project.category" required>
+            <span class="input__alert" *ngIf="category.touched && !category.valid">¡Campo categoría es requerido para continuar!</span>
         </div>
         <div class="inputs" id="inputs">
             <label for="year">Año de lanzamiento</label>
@@ -19,13 +28,14 @@
         </div>
         <div class="inputs" id="inputs">
             <label for="langs">Lenguajes</label>
-            <input type="text" name="langs" id="langs" #langs="ngModel" [(ngModel)]="project.langs">
+            <input type="text" name="langs" id="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+            <span class="input__alert" *ngIf="langs.touched && !langs.valid">¡Campo lenguajes es requerido para poder continuar!</span>
         </div>
         <div class="inputs" id="inputs">
             <label for="image">Imágen del proyecto</label>
-            <input type="file" name="image" id="image" placeholder="Cargar imágen">
+            <input type="file" name="image" id="image" placeholder="Cargar imágen" (change)="fileChangeEvent($event)">
         </div>
-        <input class="form__btn" type="submit" value="Enviar">
+        <input class="form__btn" type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
     </form>
 </section>
 

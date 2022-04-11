@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ProjectService } from './services/project/project.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UploadService } from './services/upload/upload.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [ProjectService],
+  providers: [ProjectService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

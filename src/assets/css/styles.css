@@ -214,6 +214,47 @@ body{
 
 }
 
+/* --- Cuando el btn tenga el atributo dissabled --- */
+.form__btn[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* --- Inputs alert --- */
+.input__alert{
+    width: 40%;
+    padding: 8px 0;
+    text-align: center;
+    color: rgb(199, 8, 8);
+    background-color: rgba(204, 33, 33, 0.301);
+    border-radius: 3px;
+}
+
+/* --- Estilos mensaje creación del proyecto --- */
+.message{
+    width: 50%;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success{
+    background-color: rgba(161, 238, 167, 0.671);
+    color: rgb(42, 122, 49);
+}
+
+.success a{
+    margin-left: 5px;
+    color: rgb(0, 2, 0);
+    
+}
+
+.failed{
+    background-color: rgba(204, 33, 33, 0.301);
+    color: rgb(199, 8, 8);
+}
+
 /* --- Footer --- */
 .footer{
     max-width: 1440px;
