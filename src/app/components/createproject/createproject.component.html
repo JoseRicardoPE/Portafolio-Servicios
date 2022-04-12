@@ -32,6 +32,11 @@
             <span class="input__alert" *ngIf="langs.touched && !langs.valid">¡Campo lenguajes es requerido para poder continuar!</span>
         </div>
         <div class="inputs" id="inputs">
+            <label for="urlSite">URL del Proyecto</label>
+            <input type="text" name="urlSite" id="urlSite" #urlSite="ngModel" [(ngModel)]="project.urlSite" required>
+            <span class="input__alert" *ngIf="urlSite.touched && !urlSite.valid">¡Campo url es requerido para poder continuar!</span>
+        </div>
+        <div class="inputs" id="inputs">
             <label for="image">Imágen del proyecto</label>
             <input type="file" name="image" id="image" placeholder="Cargar imágen" (change)="fileChangeEvent($event)">
         </div>

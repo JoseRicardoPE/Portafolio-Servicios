@@ -21,8 +21,8 @@ export class CreateprojectComponent implements OnInit {
 
   constructor(private projectService: ProjectService,
               private uploadService: UploadService,) {
-    this.title = 'Crear proyecto';
-    this.project = new Project('', '', '', '', 2020, '', '');
+    this.title = 'Subir proyecto';
+    this.project = new Project('', '', '', '', 2020, '', '', '');
    }
 
   ngOnInit(): void {

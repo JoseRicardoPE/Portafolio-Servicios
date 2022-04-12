@@ -33,6 +33,14 @@ export class ProjectService {
     // parametros -> los datos a guardar en el backend y los headers
     return this.http.post(this.url + 'save-project', parametros, {headers: headers});
   }
+
+  // Método para listado de proyectos del Portafolio
+  getProjects(): Observable<any>{
+
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    // petición AJAX por GET 'get-projects' es la ruta que se asignó en el BACKEND para listar todos los proyectos.
+    return this.http.get(this.url + 'get-projects', {headers: headers});
+  }
 }
 
 
