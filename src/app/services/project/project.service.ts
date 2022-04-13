@@ -41,6 +41,14 @@ export class ProjectService {
     // petición AJAX por GET 'get-projects' es la ruta que se asignó en el BACKEND para listar todos los proyectos.
     return this.http.get(this.url + 'get-projects', {headers: headers});
   }
+
+  // Método para mostrar un único proyecto
+  getProject(id: any): Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    
+    // 'project/' es la ruta de esa sección de proyecto
+    return this.http.get(this.url + 'project/' + id, {headers: headers});
+  }
 }
 
 

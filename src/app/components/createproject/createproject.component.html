@@ -1,7 +1,7 @@
 <section class="section__formulario">
     <h2 class="form__title">{{title}}</h2>
     <div class="message success" id="message" *ngIf="status == 'success'">
-        ¡El proyecto se ha creado, puedes verlo <a href="#">aquí.</a>
+        ¡El proyecto se ha creado, puedes verlo <a [routerLink]="['/proyecto', saveProject._id]">aquí.</a>
     </div>
     <div class="message failed" id="message" *ngIf="status == 'failed'">
         ¡No ha sido posible crear el proyecto!

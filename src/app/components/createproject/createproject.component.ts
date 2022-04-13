@@ -19,6 +19,9 @@ export class CreateprojectComponent implements OnInit {
   // propiedad para indicar los archivos que voy a subir
   public filesToUpload: Array<File>;
 
+  // propiedad para el link puedes verlo aquí
+  public saveProject: any;
+
   constructor(private projectService: ProjectService,
               private uploadService: UploadService,) {
     this.title = 'Subir proyecto';
@@ -39,6 +42,7 @@ export class CreateprojectComponent implements OnInit {
           // Aquí es cuando se sube la imágen
           this.uploadService.makeFileRequest(Global.url + 'upload-file/' + response.project._id, [], this.filesToUpload, 'image')
           .then( (result: any) => {
+            this.saveProject = result.project;
             this.status = 'success';
             console.log(result);
             form.reset();

@@ -8,12 +8,12 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateprojectComponent } from './components/createproject/createproject.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EditprojectComponent } from './components/editproject/editproject.component';
-import { ListprojectComponent } from './components/listproject/listproject.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProjectService } from './services/project/project.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadService } from './services/upload/upload.service';
+import { DetailProjectComponent } from './components/detail-project/detail-project.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { UploadService } from './services/upload/upload.service';
     CreateprojectComponent,
     ContactComponent,
     EditprojectComponent,
-    ListprojectComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetailProjectComponent
   ],
   imports: [
     BrowserModule,

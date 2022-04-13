@@ -1,0 +1,16 @@
+<section class="section__detailProject container" id="section__detailProject">
+    <h1 class="detailProject__title">{{project.name}}</h1>
+    <section class="detailProject__content" id="detailProject__content">
+        <figure class="projects__img" id="projects__img">
+            <img src="{{url + 'get-image/' + project.image}}" alt="" *ngIf="project.image">
+        </figure>
+        <div class="detailProject__texts" id="detailProject__texts">
+            <p class="detailProject__description">{{project.description}}</p>
+            <div class="detailProject__langs">
+                <h3 class="langs__subtitle">Lenguajes utilizados en este proyecto:</h3>
+                <p class="langs__paragraph">{{project.langs}}</p>
+            </div>
+            <a class="langs__link" href="{{project.urlSite}}" target="_blank">¡Ver proyecto!</a>
+        </div>
+    </section>
+</section>

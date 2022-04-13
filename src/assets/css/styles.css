@@ -112,7 +112,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    padding: 0 70px 40px ;
+    padding: 0 70px 40px ; 
 }
 
 .about__paragraph{
@@ -259,7 +259,7 @@ body{
 /* --- Estilos sección Proyectos --- */
 .section__projects{
     width: 100%;
-    padding: 40px 70px 40px;
+    padding: 40px;
     margin: 0 auto;
 }
 
@@ -286,7 +286,7 @@ body{
     gap: 1em;
 }
 
-.projects__texts h3{
+.projects__texts h2{
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
@@ -317,7 +317,56 @@ body{
     transition: 0.3s all;
 }
 
+.projects__link--mod{
+    text-align: left;
+}
+
 .projects__link:hover{
+    text-decoration: underline;
+    color: #01163d;
+}
+
+/* --- Detail-project --- */
+.section__detailProject{
+    width: 100%;
+    padding: 40px 70px;
+    overflow: hidden;
+}
+
+.detailProject__title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detailProject__content{
+    display: flex;
+    gap: 1.5em;
+}
+
+.detailProject__texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5em;
+}
+
+.detailProject__description{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.detailProject__langs{
+    line-height: 1.5;
+}
+
+.langs__link{
+    text-decoration: none;
+    color: #2a5298;
+}
+
+.langs__link:hover{
     text-decoration: underline;
     color: #01163d;
 }
