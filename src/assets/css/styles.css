@@ -153,16 +153,17 @@ body{
 
 /* --- Section Form --- */
 .section__formulario{
-    width: 70%;
+    width: 85%;
     margin: 20px auto;
 }
 
 .form__title{
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin: 50px 0 30px;
+    font-size: 2.25rem;
     font-weight: bold;
     letter-spacing: 1px;
+    /* border-bottom: 2px solid rgb(128, 128, 128, 0.5); */
 }
 
 .form{
@@ -267,12 +268,13 @@ body{
 }
 
 .projects__title{
-    font-size: 2rem;
+    margin: 10px 0 30px;
+    font-size: 2.25rem;
     font-weight: bold;
     font-family: var(--font3);
     letter-spacing: 1px;
     text-align: center;
-    margin-bottom: 40px;
+    /* border-bottom: 2px solid rgb(128, 128, 128, 0.5); */
 }
 
 .projects__list{
@@ -377,26 +379,16 @@ body{
 /* --- Section Contacto --- */
 .section__contact{
     width: 100%;
-    padding: 40px 70px;
+    padding: 20px 70px 40px;
 }
 
 .contact__title{
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: 0.8px;
-    position: relative;
-}
-
-.contact__title::after{
-    content: "";
-    width: 30%;
-    height: 3px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(128, 128, 128, 0.5);
+    /* border-bottom: 2px solid rgb(128, 128, 128, 0.5); */
 }
 
 .contact__content{
@@ -492,3 +484,64 @@ body{
 }
 
 /* --- Responsive Design --- */
+@media screen and (max-width: 850px) {
+    html{
+        font-size: 18px;
+    }
+
+    /* --- Titles --- */
+    .section__title,
+    .projects__title,
+    .form__title,
+    .contact__title{
+        font-size: 34px;
+    }
+
+    /* --- Section about --- */
+    .article__about{
+        padding: 0 50px 40px; 
+        text-align: justify;
+    }
+
+    /* --- Section projects --- */
+    .section__projects{
+        padding: 40px 50px 40px 10px;
+    }
+
+    .projects__list{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .projects__item{
+        text-align: justify;
+    }
+
+    .projects__texts p{
+        font-size: 1rem;
+    }
+
+    .projects__img,
+    .projects__link{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .projects__link--mod{
+        font-size: 1rem;
+    }
+
+    /* --- Section contact --- */
+    .section__contact{
+        padding: 20px 50px 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
