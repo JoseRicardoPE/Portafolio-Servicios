@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UploadService } from './services/upload/upload.service';
 import { DetailProjectComponent } from './components/detail-project/detail-project.component';
 
+import * as $ from 'jquery';
+
 @NgModule({
   declarations: [
     AppComponent,

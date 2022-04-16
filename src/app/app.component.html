@@ -1,12 +1,16 @@
 <main class="main__container" id="main__container">
   <!-- Header -->
   <header class="header container" id="header">
-    <nav class="header__nav" id="header__nav">
+    <nav class="header__nav header__nav--menu" id="header__nav">
       <a [routerLink]="['/sobre-mi']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Sobre mí</a>
       <a [routerLink]="['/proyectos']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Proyectos</a>
       <a [routerLink]="['/crear-proyecto']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Subir Proyecto</a>
       <a [routerLink]="['/contacto']" class="nav__link" id="nav__link" [routerLinkActive]="['actived']">Contácto</a>
+      <img src="../assets/images/close.svg" alt="Image_close_menu" class="menu__close"/>
     </nav>
+    <div class="header__menu">
+      <img src="../assets/images/menu.svg" alt="Image_open_menu" class="menu__open" />
+    </div>
   </header>
 
   <!-- Main Section -->
