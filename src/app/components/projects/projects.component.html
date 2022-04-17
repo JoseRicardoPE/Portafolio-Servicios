@@ -3,14 +3,14 @@
     <ul class="projects__list">
         <li class="projects__item" *ngFor="let project of projects">
             <div class="projects__texts">
-                <h2>{{project.name}}</h2>
-                <p>{{project.description}}</p>
-                <a class="projects__link projects__link--mod"[routerLink]="['/proyecto', project._id]" target="_blank">Acerca del proyecto</a>
+                <h2 class="projects__subtitle">{{project.name}}</h2>
+                <p class="projects__paragraph">{{project.description}}</p>
+                <a class="projects__link"[routerLink]="['/proyecto', project._id]" target="_blank">Acerca del proyecto</a>
             </div>
             <figure class="projects__img">
                 <img src="{{url + 'get-image/' + project.image}}" alt="" *ngIf="project.image">
-                <a class="projects__link" href="{{project.urlSite}}" target="_blank">Ir al proyecto</a>
             </figure>
+            <a class="projects__link" href="{{project.urlSite}}" target="_blank">Ir al proyecto</a>
         </li>
     </ul>
 </section>
